@@ -14,10 +14,12 @@ public class PlayerAudioVisual : MonoBehaviour {
     public GameObject player;
     private FirstPersonController controller;
 
+
     // Use this for initialization
     void Start () {
         controller = player.GetComponent<FirstPersonController>();
         controller.enabled = false;
+
         PlayIntro();
 	}
 	
@@ -29,6 +31,20 @@ public class PlayerAudioVisual : MonoBehaviour {
         {
             FadeIn();
             controller.enabled = true;
+
+        }
+
+        if (isPlaying == false && source.clip == clips[5])
+        {
+            PlayMonsterMono();
+        }
+
+        if (isPlaying == false && source.clip == clips[6]) {
+           // for (float i = 3; i <= 3; i -= Time.deltaTime)
+           // {
+             //   if(i == 0)
+              //      blackScreen.color = new Color(240, 0, 0, i);
+            //}
         }
 
     }
@@ -66,6 +82,7 @@ public class PlayerAudioVisual : MonoBehaviour {
     public void PlayMonsterMono() {
         source.clip = clips[6];
         source.Play();
+        FadeOut();
     }
 
     public void FadeIn() {
@@ -86,18 +103,19 @@ public class PlayerAudioVisual : MonoBehaviour {
             for (float i = 2; i >= 0; i -= Time.deltaTime)
             {
                 // set color with i as alpha
-                blackScreen.color = new Color(1, 1, 1, i);
+                blackScreen.color = new Color(0, 0, 0, i);
                 yield return null;
             }
         }
         // fade from transparent to opaque
         else
         {
+            Debug.Log("Fade out called");
             // loop over 1 second
-            for (float i = 2; i <= 1; i += Time.deltaTime)
+            for (float i = 2; i <= 2; i += Time.deltaTime)
             {
                 // set color with i as alpha
-                blackScreen.color = new Color(1, 1, 1, i);
+                blackScreen.color = new Color(0, 0, 0, i);
                 yield return null;
             }
         }

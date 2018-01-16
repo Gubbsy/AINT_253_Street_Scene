@@ -7,6 +7,7 @@ public class VentAudio : MonoBehaviour {
 
     public GameObject PlayerAudioManager;
     private PlayerAudioVisual playerAudio;
+    
     public Text presseE;
     private bool inRange;
 
