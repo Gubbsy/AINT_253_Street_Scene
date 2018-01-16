@@ -27,8 +27,11 @@ public class VentAudio : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+
+        Debug.Log("Vent Trigger entered");
         if (other.tag == "Player")
         {
+            Debug.Log("Vent trigger entered and tag player");
             presseE.text = "Press 'E' to inspect";
             inRange = true;
         }

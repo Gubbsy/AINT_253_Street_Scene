@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerAudioVisual : MonoBehaviour {
@@ -13,12 +14,15 @@ public class PlayerAudioVisual : MonoBehaviour {
     public Image blackScreen;
     public GameObject player;
     private FirstPersonController controller;
+    public Text UIText;
 
 
     // Use this for initialization
     void Start () {
+        Cursor.visible = false;
         controller = player.GetComponent<FirstPersonController>();
         controller.enabled = false;
+        UIText.text = "[ Explore the factory and Search for clues ! ]";
 
         PlayIntro();
 	}
@@ -29,7 +33,9 @@ public class PlayerAudioVisual : MonoBehaviour {
 
         if (isPlaying == false && source.clip == clips[0])
         {
+            UIText.text = "";
             FadeIn();
+            source.clip = clips[1];
             controller.enabled = true;
 
         }
@@ -40,11 +46,11 @@ public class PlayerAudioVisual : MonoBehaviour {
         }
 
         if (isPlaying == false && source.clip == clips[6]) {
-           // for (float i = 3; i <= 3; i -= Time.deltaTime)
-           // {
-             //   if(i == 0)
-              //      blackScreen.color = new Color(240, 0, 0, i);
-            //}
+            UIText.text = " ... You where o b s o r b e d ( Press 'Esc' to exit )";
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            SceneManager.LoadScene(0);
         }
 
     }

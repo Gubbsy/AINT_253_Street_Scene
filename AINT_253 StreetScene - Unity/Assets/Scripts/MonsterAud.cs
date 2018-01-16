@@ -10,7 +10,7 @@ public class MonsterAud : MonoBehaviour {
 
     public GameObject monster;
     private AudioSource monsterSparks;
-    public GameObject light;
+    public GameObject brokenLight;
     private AudioSource lightSparks;
    
 
@@ -20,7 +20,7 @@ public class MonsterAud : MonoBehaviour {
     {
         playerAudio = PlayerAudioManager.GetComponent<PlayerAudioVisual>();
         monsterSparks = monster.GetComponent<AudioSource>();
-        lightSparks = light.GetComponent<AudioSource>();
+        lightSparks = brokenLight.GetComponent<AudioSource>();
         isTriggered = false;
     }
 

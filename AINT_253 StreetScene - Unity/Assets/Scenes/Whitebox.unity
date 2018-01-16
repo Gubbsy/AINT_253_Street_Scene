@@ -1372,7 +1372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerAudioManager: {fileID: 1655357154}
   monster: {fileID: 1374600046}
-  light: {fileID: 514387303}
+  brokenLight: {fileID: 514387303}
 --- !u!135 &135999408
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2382,7 +2382,7 @@ RectTransform:
   m_LocalScale: {x: 20.96771, y: 6.9959235, z: 1}
   m_Children: []
   m_Father: {fileID: 2036097067}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4420,10 +4420,10 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 47
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 4
+  MaxDistance: 3.2178288
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -17812,16 +17812,16 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 941c50a5631ba1a4685aeb249b3fc8ba, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.05
+  m_Volume: 0.04
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 123
+  Priority: 65
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 4.8177795
+  MaxDistance: 4.6571655
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -19652,6 +19652,7 @@ MonoBehaviour:
   source: {fileID: 1655357157}
   blackScreen: {fileID: 239389657}
   player: {fileID: 1565435916}
+  UIText: {fileID: 1781665890}
 --- !u!4 &1655357156
 Transform:
   m_ObjectHideFlags: 0
@@ -26762,12 +26763,12 @@ RectTransform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 2036097067}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 7}
+  m_SizeDelta: {x: 300, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1781665890
 MonoBehaviour:
@@ -26789,7 +26790,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b182c22cfa8a3ef40919ddadd2378cf6, type: 3}
     m_FontSize: 14
     m_FontStyle: 1
     m_BestFit: 0
@@ -28853,8 +28854,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1781665889}
   - {fileID: 239389656}
+  - {fileID: 1781665889}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
