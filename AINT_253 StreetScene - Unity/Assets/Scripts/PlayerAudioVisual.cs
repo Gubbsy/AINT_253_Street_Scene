@@ -47,6 +47,8 @@ public class PlayerAudioVisual : MonoBehaviour {
 
         if (isPlaying == false && source.clip == clips[6]) {
             UIText.text = " ... You where o b s o r b e d ( Press 'Esc' to exit )";
+            if (Input.GetKeyDown(KeyCode.Escape))
+                Application.Quit();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape)) {
